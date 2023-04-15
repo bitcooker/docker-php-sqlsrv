@@ -18,7 +18,7 @@ RUN docker-php-ext-install bcmath calendar gd intl mysqli pdo_mysql xsl zip \
     pecl install pdo_sqlsrv-5.8.1 \
     docker-php-ext-enable sqlsrv pdo_sqlsrv
 
-RUN RUN apt-get clean && \
+RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
