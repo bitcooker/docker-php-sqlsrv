@@ -1,1 +1,1 @@
-# php-sqlsrv
+# PHP Docker Image with SQL Server Extension 
