@@ -18,9 +18,9 @@ RUN docker-php-ext-install bcmath calendar gd intl mysqli pdo_mysql xsl zip \
     && pecl install pdo_sqlsrv-5.8.1 \
     && docker-php-ext-enable sqlsrv pdo_sqlsrv
 
-RUN apt-get -y install wget \\
-    && wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb \\
-    && dpkg -i wkhtmltox_0.12.6-1.buster_amd64.deb \\
+RUN apt-get -y install wget \
+    && wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb \
+    && dpkg -i wkhtmltox_0.12.6-1.buster_amd64.deb \
     && apt-get install -f
 
 RUN apt-get clean \
